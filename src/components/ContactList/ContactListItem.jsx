@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 import css from "./ContactList.module.css";
 
 const ContactListItem = ({ name, number, contactID }) => {
@@ -22,6 +22,5 @@ ContactListItem.propTypes = {
     number: PropTypes.string.isRequired,
     contactID: PropTypes.string.isRequired,
 };
-
 
 export default ContactListItem;

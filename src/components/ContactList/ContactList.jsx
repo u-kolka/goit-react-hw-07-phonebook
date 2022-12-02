@@ -3,13 +3,14 @@ import ContactListItem from './ContactListItem';
 
 const getFilteredContacts = (contacts, filterValue) => {
   if (filterValue) {
+
     return contacts.filter(contact => contact.name.toLowerCase().includes(filterValue));
   };
   return contacts;
   };
 
 const ContactList = () => {
-  const contacts = useSelector(state => state.contacts.contacts);
+  const contacts = useSelector(state => state.contacts.items);
   const filterValue = useSelector(state => state.filter);
   const filteredContacts = getFilteredContacts(contacts, filterValue);
 

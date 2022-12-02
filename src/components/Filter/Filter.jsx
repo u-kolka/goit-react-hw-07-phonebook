@@ -4,7 +4,6 @@ import css from "./Filter.module.css";
 
 const Filter = () => {
     const dispatch = useDispatch();
-
     const changeFilterField = event => {
         const flterFieldValue = event.currentTarget.value.toLowerCase();
         dispatch(setFilter(flterFieldValue));
