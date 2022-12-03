@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { toast } from 'react-toastify';
 import { useDispatch } from "react-redux";
 import { deleteContact } from 'redux/operations';
 import css from "./ContactList.module.css";
@@ -7,6 +8,7 @@ const ContactListItem = ({ name, number, contactID }) => {
     const dispatch = useDispatch();
     const handleDelete = () => {
         dispatch(deleteContact(contactID));
+        toast.info(name + ' has been deleted from the contact list!', {icon: "🚀"});
     };
     
     return (

@@ -22,11 +22,11 @@ function ContactForm() {
       }
     }
 
-      dispatch(addContact({
-        name: form.elements.name.value,
-        number: form.elements.number.value,
-      }));
-  
+    dispatch(addContact({
+      name: form.elements.name.value,
+      number: form.elements.number.value,
+    }));
+    toast.info(form.elements.name.value + ' has been added to the contact list!', {icon: "🚀"});
     form.reset();
   };
 
