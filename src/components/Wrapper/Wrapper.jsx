@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from "./Wrapper.module.css";
 
 const Wrapper = ({ children }) => {
@@ -5,3 +6,7 @@ const Wrapper = ({ children }) => {
 }
 
 export default Wrapper;
+
+Wrapper.propTypes = {
+  children: PropTypes.array.isRequired,
+};
